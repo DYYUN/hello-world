@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI_Detail</title>
+</head>
+<body>
+<table  border="1">
+    <thead>
+    <th>이름</th>
+    <th>신장</th>
+    <th>체중</th>
+    <th>BMI</th>
+    <th>수정</th>
+    <th>삭제</th>
+
+    </thead>
+    <tr>
+        <td> {{object.name}} </td>
+        <td> {{object.height}} </td>
+        <td> {{object.weight}} </td>
+        <td> {{object.bmi}} </td>
+        <td><a href="{% url 'bmi_update' object.id %}"> 수정 </a></td>
+        <td><a href="{% url 'bmi_delete' object.id %}"> 삭제 </a></td>
+
+    </tr>
+</table>
+
+</body>
+</html>
