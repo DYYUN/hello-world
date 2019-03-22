@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.utils.timezone import now
 # Create your models here.
 #BMI_
+
 class BMI(models.Model):
     name = models.CharField(max_length=20 , unique = True)
     height = models.FloatField()
