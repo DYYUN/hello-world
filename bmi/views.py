@@ -32,20 +32,18 @@ from .models import BMI
 class BMIList(ListView):
     model =  BMI
 
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import UpdateView,CreateView, DeleteView
 class BMIUpdate(UpdateView):
     model = BMI
     fields = ['name', 'height', 'weight']
     template_name = 'bmi/bmi_update.html'
     success_url = '/'
 
-from django.views.generic.edit import CreateView
 class BMICreate(CreateView):
     model = BMI
     fields = ['name', 'height', 'weight']
     template_name = 'bmi/bmi_create.html'
 
-from django.views.generic.edit import DeleteView
 class BMIDelete(DeleteView):
     model = BMI
     template_name = 'bmi/bmi_delete.html'
